@@ -1,0 +1,94 @@
+/* 01-reset.css — Reset baseado no "modern CSS reset" de Andy Bell (MIT)
+   Fonte de inspiração: https://github.com/hankchizljaw/modern-css-reset (adaptado)
+
+   Objetivo: reduzir inconsistências entre navegadores e fornecer uma base neutra
+   para estilos modernos (box-sizing, tipografia, listas, elementos de mídia, formulários).
+*/
+
+/* Box sizing global */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Remova margens padrão do body e defina fonte base */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Renderização otimizada de fontes */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Reset de elementos HTML comuns */
+main, header, nav, section, article, aside, footer, figure {
+  display: block;
+}
+
+/* Remover margens padrão de blocos */
+h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+/* Remover estilos de listas */
+ul[role="list"], ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Imagens e mídia tornam-se responsivas */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Form inputs */
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+}
+
+/* Botões sem estilo padrão */
+button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Links sem estilo por padrão */
+a { text-decoration: none; color: inherit; }
+
+/* Tabela leve */
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* Melhor foco acessível (apenas sugestão, customize conforme design) */
+:focus {
+  outline: 2px solid Highlight;
+  outline-offset: 2px;
+}
+
+/* Redefinir elementos de formulário para evitar diferenças entre navegadores */
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remover autofill background (Chrome) */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset;
+  -webkit-text-fill-color: inherit;
+}
+
+/* Suporte para reductions (prefer-reduced-motion) */
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+}
+
+/* Fim do reset */
