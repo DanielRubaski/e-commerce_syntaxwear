@@ -1,5 +1,5 @@
 .header{
-  background-color: aqua;
+  background-color: #ffffff;
   position: fixed;
   top: 20px;
   left: 50%;
@@ -10,7 +10,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 20px;
+  padding: 0.625rem 1.25rem;
 }
 
 .header .logo img{
@@ -22,6 +22,7 @@
 }
 .nav-center ul li a, .nav-right ul li a{
   font-size: 1.25rem;
+  color: #333333
 }
 .nav-center ul li a:hover, .nav-right ul li a:hover{
     color: #7c3aed;
